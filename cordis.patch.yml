@@ -1,0 +1,13 @@
+# dsh-dafeiyu-entry — DSH bundle patch
+#
+# 把插件的 Host 半侧挂进当前 profile 的配置树；Web 半侧由 dsh.client 声明，
+# 宿主按 package.json 的 dsh.client 自动组装 bundle，这里不用写。
+#
+# 约定（与 dsh-startup-secret / dsh-connect-workbuddy 对齐）：
+#   patch entry id == package name == client ModuleLoader id == dsh-dafeiyu-entry
+# 三者必须完全一致，否则浏览器半侧会被重复执行并报
+#   client-modules: duplicate factory registration
+# 进而把 web boot 打成失败、NEXT 进安全模式。
+- insert:
+    - id: dsh-dafeiyu-entry
+      name: dsh-dafeiyu-entry

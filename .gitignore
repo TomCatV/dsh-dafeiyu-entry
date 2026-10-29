@@ -1,0 +1,9 @@
+node_modules/
+*.log
+*.bak
+*.bak-*
+.DS_Store
+Thumbs.db
+
+# 本地环境特有
+tmp/
