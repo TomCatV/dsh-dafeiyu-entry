@@ -22,7 +22,8 @@
     "lib",
     "cordis.patch.yml",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "docs"
   ],
   "license": "MIT",
   "engines": {
